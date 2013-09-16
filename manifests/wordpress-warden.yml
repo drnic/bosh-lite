@@ -93,8 +93,8 @@ jobs:
     - name: default
       default: [dns, gateway]
       static_ips:
-        - 10.244.1.10
-        - 10.244.1.14
+      - 10.244.1.10
+      - 10.244.1.14
 
 properties:
   wordpress:
@@ -104,9 +104,9 @@ properties:
       - 10.244.1.6
     servername: wp.appcloud14.dev.mozycloud.com
     db:
-       name: wp
-       user: wordpress
-       pass: w0rdpr3ss
+      name: wp
+      user: wordpress
+      pass: w0rdpr3ss
     auth_key: random key
     secure_auth_key: random key
     logged_in_key: random key
