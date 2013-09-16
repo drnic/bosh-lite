@@ -1,7 +1,13 @@
 ---
-name: wordpress
-director_uuid: CHANGE-ME
+<% puts <<-EOS
+Update your deployment file with the following:
 
+director_uuid: #{`bosh status | grep UUID | awk '{print $2}'`}
+
+EOS
+%>
+name: wordpress
+director_uuid: "CHANGEME" # change this and remove the ERb block above
 release:
   name: wordpress
   version: latest
