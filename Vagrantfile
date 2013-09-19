@@ -82,6 +82,7 @@ Vagrant.configure('2') do |config|
 
     provider.client_id = ENV["BOSH_DIGITAL_OCEAN_CLIENT_ID"] || ENV["DIGITAL_OCEAN_CLIENT_ID"]
     provider.api_key = ENV["BOSH_DIGITAL_OCEAN_API_KEY"] || ENV["DIGITAL_OCEAN_API_KEY"]
+    provider.size = ENV["BOSH_DIGITAL_OCEAN_SIZE"] || "4GB"
 
     override.vm.provision :shell, :path => "scripts/aws_precise_customize.sh"
 
