@@ -64,7 +64,7 @@ Vagrant.configure('2') do |config|
     override.vm.provision :chef_solo do |chef|
       chef.cookbooks_path = ['cookbooks', 'site-cookbooks']
       chef.log_level = :debug
-      chef.add_recipe 'bosh-lite::provider.files'
+      chef.add_recipe 'bosh-lite::aws_files'
       chef.add_recipe 'build-essential::default'
       chef.add_recipe 'bosh-lite::warden'
       chef.add_recipe 'bosh-lite::bosh'
@@ -88,7 +88,7 @@ Vagrant.configure('2') do |config|
     override.vm.provision :chef_solo do |chef|
       chef.cookbooks_path = ['cookbooks', 'site-cookbooks']
       chef.log_level = :debug
-      chef.add_recipe 'bosh-lite::provider.files'
+      chef.add_recipe 'bosh-lite::aws_files'
       chef.add_recipe 'build-essential::default'
       chef.add_recipe 'bosh-lite::warden'
       chef.add_recipe 'bosh-lite::bosh'
