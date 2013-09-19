@@ -5,6 +5,7 @@ include_recipe 'bosh-lite::rbenv'
   ack-grep
   maven2
   default-jdk
+  libsqlite3-dev
 ).each do |package_name|
   package package_name
 end
